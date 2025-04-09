@@ -1,33 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>GeoTagger | Home</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<div class="nav-bar">
-    <h3 class="title">GeoTagger</h3>
-    <div class="nav-buttons">
-        <button type="button"> Home </button>
-        <button type="button"> Saved Places </button>
-    </div>
-</div>
-<div class="search-pane">
-    <p><strong>Where do you want to explore?</strong></p>
-    <label>
-        <input type="text" placeholder="🔍 Search for a city..." >
-        <button type="button"> Search </button>
-    </label>
-    <div id="recommendations">
-        Recommended:
-        <a href="#Paris">Paris</a>
-        |
-        <a href="#Paris">Tokyo</a>
-        |
-        <a href="#Paris">New York</a>
-    </div>
+    <head>
+        <meta charset="UTF-8">
+        <title>Home | GeoTagger</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="nav-bar">
+            <h3 class="title">GeoTagger</h3>
+            <div class="nav-buttons">
+                <ul>
+                    <li>
+                        <button type="button"> Home </button>
+                    </li>
+                    <li>
+                        <button type="button"> Saved Places </button>
+                    </li>
+                    <li>
+                        <button type="button"> LogIn / Register </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="search-pane">
+            <p><strong>Where do you want to explore?</strong></p>
+            <label>
+                <input type="text" placeholder="🔍 Search for a city..." >
+                <button type="button"> Search </button>
+            </label>
+            <div id="recommendations">
+                Recommended:
+                <a href="#Paris">Paris</a>
+                |
+                <a href="#Tokyo">Tokyo</a>
+                |
+                <a href="#New-York">New York</a>
+            </div>
 
-</div>
-</body>
+        </div>
+
+        <p class="initializer"> Browse Locations : </p>
+
+
+        <div id="locations">
+
+            <ul>
+                <li>
+                    <a href="./cities/paris.html"><img src="/img/paris1.jpeg" alt="Paris, France"> Paris, France </a>
+                </li>
+                <li>
+                    <a href="#paris"><img src="/img/paris1.jpeg" alt="Paris, France"> Paris, France </a>
+                </li>
+                <li>
+                    <a href="#paris"><img src="/img/paris1.jpeg" alt="Paris, France"> Paris, France </a>
+                </li>
+                <li>
+                    <a href="#paris"><img src="/img/paris1.jpeg" alt="Paris, France"> Paris, France </a>
+                </li>
+                <li>
+                    <a href="#paris"><img src="/img/paris1.jpeg" alt="Paris, France"> Paris, France </a>
+                </li>
+            </ul>
+        </div>
+    </body>
 </html>

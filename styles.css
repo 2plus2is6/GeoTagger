@@ -1,68 +1,206 @@
-.nav-bar{
-    background-color: #E2E2E2;
-    padding: 30px 20px;
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.nav-bar {
+    background-color: #F1F1F1;
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
 }
 
 .title {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    font-family: 'Oswald', sans-serif;
 }
 
-.nav-buttons {
+.nav-buttons ul {
+    list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-buttons li {
+    display: inline;
 }
 
 .nav-buttons button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     background-color: #B0B0B0;
     color: white;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     font-size: 1rem;
+    border-radius: 25px;
 }
 
 .nav-buttons button:hover {
     background-color: #A0A0A0;
+    transform: scale(1.05);
 }
 
-.search-pane{
-    background-color: #E2E2E2;
-    padding: 50px 20px;
+/* Search Pane Styles */
+.search-pane {
+    background-color: #F9F9F9;
+    padding: 120px 50px;
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap:10px;
+    gap: 20px;
+    text-align: center;
 }
 
 .search-pane p {
-    font-size:50px;
+    font-size: 3rem;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .search-pane input {
-    font-size:30px;
-    width:500px;
-    border-radius: 9px;
-    border: 2px solid
+    font-size: 1.2rem;
+    width: 400px;
+    padding: 12px 15px;
+    border-radius: 30px;
+    border: 2px solid #B0B0B0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.search-pane input:focus {
+    border-color: #808080;
+    box-shadow: 0 0 8px rgba(128, 128, 128, 0.5);
 }
 
 .search-pane button {
-    font-size:15px;
-    text-align: center;
-    word-wrap: break-word;
-    width:70px;
-
-    border-radius: 9px;
-    border: 2px solid
+    font-size: 1rem;
+    padding: 12px 25px;
+    background-color: #B0B0B0;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+.search-pane button:hover {
+    background-color: #A0A0A0;
+    transform: scale(1.05);
+}
 
-#recommendations{
+/* Recommendations Section */
+#recommendations {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 20px;
+}
+
+#recommendations a {
+    text-decoration: none;
+    color: #808080;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#recommendations a:hover {
+    color: #A0A0A0;
+    text-decoration: underline;
+}
+
+/* Locations Section */
+#locations {
+    padding: 40px 5%;
     display: flex;
-    gap: 10px;
-    font-size:20px;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 30px; /* Adjust the gap to add more space between items */
+    justify-content: center; /* Center items horizontally */
+    margin-top: 50px; /* Added space below the navbar */
 }
+
+.initializer {
+    font-size: 32px;
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+    font-weight: 700;
+    margin-top: 120px;
+}
+
+#locations ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Ensure the items are centered */
+    gap: 30px; /* Space between city buttons */
+}
+
+#locations li {
+    width: 30%; /* Ensures that no more than 3 items are in a row */
+    display: inline-block;
+}
+
+#locations a {
+    display: block;
+    background-color: white;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    width: 100%; /* Make the button fill the container */
+    padding: 15px; /* Increased padding */
+    font-size: 1.3rem; /* Slightly increased font size */
+    color: #333;
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#locations a:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#locations a img {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #B0B0B0;
+}
+
+#locations a p {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 1.2rem; /* Increased font size for city names */
+}
+
+

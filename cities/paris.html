@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Paris | GeoTagger</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="paris.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="nav-bar">
+    <h3 class="title">GeoTagger</h3>
+    <div class="nav-buttons">
+        <ul>
+            <li><button type="button"> Home </button></li>
+            <li><button type="button"> Saved Places </button></li>
+            <li><button type="button"> LogIn / Register </button></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Starter Image Section -->
+<div class="starterimg">
+    <div class="overlay">
+        <div class="location-info">
+            <h1>PARIS</h1>
+            <p class="quote">The City Of Love</p>
+        </div>
+    </div>
+</div>
+
+<!-- Map and Description Section -->
+<div class="map-location-container">
+    <!-- Map Section using OpenStreetMap iframe -->
+    <div class="osm-map-container">
+        <iframe
+                src="https://www.openstreetmap.org/export/embed.html?bbox=2.2522,48.8566,2.3730,48.9076&amp;layer=mapnik&amp;marker=48.8566,2.3522"
+                width="1200px" height="500px" style="border: none;">
+        </iframe>
+    </div>
+
+    <!-- Location Description Section -->
+    <div class="location-description">
+        <h2>Where is Paris?</h2>
+        <p>Paris is the capital of France, located on the river Seine. It is known for its beautiful architecture, iconic landmarks like the Eiffel Tower, and rich cultural history.</p>
+    </div>
+</div>
+
+<!-- Category Dropdowns -->
+<div class="category">
+    <button class="dropdown-btn" onclick="toggleDropdown('attractions')">
+        Click to learn more about ATTRACTIONS
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="buttons" id="attractions">
+        <button>Attraction 1</button>
+        <button>Attraction 2</button>
+        <button>Attraction 3</button>
+    </div>
+</div>
+
+<div class="category">
+    <button class="dropdown-btn" onclick="toggleDropdown('cafes')">
+        Click to learn more about CAFES
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="buttons" id="cafes">
+        <button>Cafe 1</button>
+        <button>Cafe 2</button>
+        <button>Cafe 3</button>
+    </div>
+</div>
+
+<div class="category">
+    <button class="dropdown-btn" onclick="toggleDropdown('activities')">
+        Click to learn more about ACTIVITIES
+        <span class="arrow">&#9660;</span>
+    </button>
+    <div class="buttons" id="activities">
+        <button>Activity 1</button>
+        <button>Activity 2</button>
+        <button>Activity 3</button>
+    </div>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="paris.js"></script>
+
+
+</body>
+</html>
